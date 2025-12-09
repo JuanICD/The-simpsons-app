@@ -14,7 +14,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MyMainScreen( ) {
+fun MyMainScreen(
+    onListClick: () -> Unit,
+    onAboutClick: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -28,13 +31,13 @@ fun MyMainScreen( ) {
 
 
         Button(
-            onClick = {},
+            onClick = { onListClick() },
             modifier = Modifier.size(width = 120.dp, height = 50.dp)
         ) {
             Text(text = "List")
         }
         Button(
-            onClick = {},
+            onClick = { onAboutClick() },
             modifier = Modifier.size(width = 120.dp, height = 50.dp)
         ) {
             Text(text = "About")

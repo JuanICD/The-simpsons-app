@@ -1,5 +1,6 @@
-package com.example.applistadoprueba.data
+package com.data
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.thesimpsomapp.R
 
@@ -8,7 +9,7 @@ data class Character(
     val name: String,
     val age: Int,
     @StringRes val description: Int,
-    val image: Int
+    @DrawableRes val image: Int
 )
 
 object CharacterRepository {

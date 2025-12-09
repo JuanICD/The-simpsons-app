@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.ui.screens.MyMainScreen
+import com.navegation.NavigationController
 import com.ui.theme.TheSimpSomTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TheSimpSomTheme {
-                MyMainScreen()
+                NavigationController()
             }
         }
     }
