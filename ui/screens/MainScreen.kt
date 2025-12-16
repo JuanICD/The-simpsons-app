@@ -34,7 +34,7 @@ fun MyMainScreen(
             onClick = { onListClick() },
             modifier = Modifier.size(width = 120.dp, height = 50.dp)
         ) {
-            Text(text = "List")
+            Text(text = "Gallery")
         }
         Button(
             onClick = { onAboutClick() },

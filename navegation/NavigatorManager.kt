@@ -6,11 +6,10 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.ui.NavDisplay
-import com.data.Character
-import com.data.CharacterRepository
-import com.ui.screens.AboutScreen
+import com.example.myapp.data.CharacterRepository
+import com.example.myapp.ui.screens.AboutScreen
 import com.ui.screens.CharacterDetailScreen
-import com.ui.screens.ImageCardList
+import com.example.myapp.ui.screens.ImageCardList
 import com.ui.screens.MyMainScreen
 
 data object List
@@ -35,10 +34,15 @@ fun NavigationController() {
                 }
 
                 is List -> NavEntry(key) {
-                    ImageCardList {
-                        backStack.add(CharacterDetail(it))
-                    }
+                    ImageCardList(
+                        // Parámetro 1: La acción para el botón de "atrás"
+                        onBack = { backStack.removeLastOrNull() },
 
+                        // Parámetro 2: La acción para cuando se hace clic en una tarjeta
+                        navigateToDetail = { characterId ->
+                            backStack.add(CharacterDetail(id = characterId))
+                        }
+                    )
                 }
 
                 is CharacterDetail -> NavEntry(key) {
@@ -52,7 +56,7 @@ fun NavigationController() {
 
 
                 is About -> NavEntry(key) {
-                    AboutScreen()
+                    AboutScreen(onBack = { backStack.removeLastOrNull() })
                 }
 
 

@@ -1,8 +1,9 @@
-package com.data
+package com.example.myapp.data
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.thesimpsomapp.R
+import com.example.myapp.R
+
 
 data class Character(
     val id: Int,
@@ -36,7 +37,43 @@ object CharacterRepository {
                 12,
                 R.string.bart_description,
                 R.drawable.bart
+            ),
+            Character(
+                4,
+                "Lisa",
+                8,
+                R.string.lisa_description,
+                R.drawable.lisa // Necesitarás una imagen lisa.png
+            ),
+            Character(
+                5,
+                "Maggie",
+                1,
+                R.string.maggie_description,
+                R.drawable.maggie // Necesitarás una imagen maggie.png
+            ),
+            Character(
+                6,
+                "Mr. Burns",
+                104,
+                R.string.burns_description,
+                R.drawable.burns // Necesitarás una imagen burns.png
+            ),
+            Character(
+                7,
+                "Krusty",
+                52,
+                R.string.krusty_description,
+                R.drawable.krusty // Necesitarás una imagen krusty.png
+            ),
+            Character(
+                8,
+                "Moe",
+                47,
+                R.string.moe_description,
+                R.drawable.moe // Necesitarás una imagen moe.png
             )
+
 
         )
 
