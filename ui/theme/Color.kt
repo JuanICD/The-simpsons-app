@@ -2,18 +2,24 @@ package com.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Colores Primarios y Secundarios
-val SimpsonsYellow = Color(0xFFFDD835) // Amarillo brillante de la piel
-val SimpsonsBlue = Color(0xFF1E88E5)   // Azul del cielo/pantalones
-val SimpsonsGreen = Color(0xFF4CAF50)  // Verde de la ropa/césped
+// Paleta tenue / desaturada - light
+val LightPrimary = Color(0xFF607D8B)      // azul grisáceo
+val LightOnPrimary = Color(0xFFFFFFFF)
+val LightSecondary = Color(0xFF94A3B8)    // slate tenue
+val LightBackground = Color(0xFFF5F7FA)   // fondo muy claro
+val LightSurface = Color(0xFFFFFFFF)
+val LightOnBackground = Color(0xFF0F1724)
+val LightOnSurface = Color(0xFF0F1724)
+val LightError = Color(0xFFB00020)
+val LightOnError = Color(0xFFFFFFFF)
 
-// Colores de Fondo y Superficie
-val BackgroundLight = Color(0xFFFFFFFF) // Fondo claro
-val BackgroundDark = Color(0xFF212121)  // Fondo oscuro
-val SurfaceLight = Color(0xFFEEEEEE)    // Superficie clara (ej. tarjetas)
-val SurfaceDark = Color(0xFF424242)     // Superficie oscura
-
-// Colores de Texto y Contenido
-val TextLight = Color(0xFF000000)      // Texto oscuro para fondo claro
-val TextDark = Color(0xFFFFFFFF)       // Texto claro para fondo oscuro
-val ErrorColor = Color(0xFFD32F2F)     // Color de error
+// Paleta tenue / oscura - dark
+val DarkPrimary = Color(0xFF90A4AE)       // versión más clara para sobre fondo oscuro
+val DarkOnPrimary = Color(0xFF06121A)
+val DarkSecondary = Color(0xFF6B7280)
+val DarkBackground = Color(0xFF0B1220)    // fondo oscuro apagado
+val DarkSurface = Color(0xFF0F1B24)
+val DarkOnBackground = Color(0xFFE6EEF6)
+val DarkOnSurface = Color(0xFFE6EEF6)
+val DarkError = Color(0xFFCF6679)
+val DarkOnError = Color(0xFF201018)
